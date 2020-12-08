@@ -1,0 +1,33 @@
+﻿<Window x:Class="MagazinWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:MagazinWPF"
+        mc:Ignorable="d"
+        Title="Меню" Height="600" Width="1000" ResizeMode="NoResize" >
+    <Grid Background="#ffdfba">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="375*"/>
+            <ColumnDefinition Width="122*"/>
+        </Grid.ColumnDefinitions>
+        <Border MinWidth="400" Margin="0,1,0,489" Background="White" VerticalAlignment="Center" Padding="15" MaxWidth="1000" Height="81" Grid.ColumnSpan="2">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Магазин Директ" FontSize="30" Margin="0 0 0 20" HorizontalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="3"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <Grid Margin="0 0 0 20" Grid.ColumnSpan="2">
+            <Button HorizontalAlignment="Left" Content="Магазин" Height="Auto" Margin="45,121,0,291" Width="160" FontSize="24" FontWeight="Bold" Style="{StaticResource MaterialDesignFlatLightBgButton}" Click="ButtonMagaz_Click"/>
+            <Button HorizontalAlignment="Right" Content="Склад" Margin="0,121,389,291" Height="Auto" Width="160" FontSize="24" FontWeight="Bold" Style="{StaticResource MaterialDesignFlatLightBgButton}" Click="ButtonSklad_Click"/>
+            <Button HorizontalAlignment="Center" Content="Товар" Margin="246,121,588,291" Height="Auto" Width="160" FontSize="24" FontWeight="Bold" Style="{StaticResource MaterialDesignFlatLightBgButton}" Click="ButtonTovar_Click"/>
+        </Grid>
+    </Grid>
+</Window>

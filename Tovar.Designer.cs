@@ -1,4 +1,5 @@
-﻿namespace Magazinciks
+﻿
+namespace MagazinWPF
 {
     partial class Tovar
     {
@@ -30,13 +31,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tovar));
-            this.bD_SeregiDataSet = new Magazinciks.BD_SeregiDataSet();
+            this.magazinichDataSet = new MagazinWPF.MagazinichDataSet();
             this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable2TableAdapter = new Magazinciks.BD_SeregiDataSetTableAdapters.DataTable2TableAdapter();
-            this.tableAdapterManager = new Magazinciks.BD_SeregiDataSetTableAdapters.TableAdapterManager();
+            this.dataTable2TableAdapter = new MagazinWPF.MagazinichDataSetTableAdapters.DataTable2TableAdapter();
+            this.tableAdapterManager = new MagazinWPF.MagazinichDataSetTableAdapters.TableAdapterManager();
             this.dataTable2BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -45,33 +47,29 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_SeregiDataSet)).BeginInit();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinichDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingNavigator)).BeginInit();
             this.dataTable2BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // bD_SeregiDataSet
+            // magazinichDataSet
             // 
-            this.bD_SeregiDataSet.DataSetName = "BD_SeregiDataSet";
-            this.bD_SeregiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.magazinichDataSet.DataSetName = "MagazinichDataSet";
+            this.magazinichDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTable2BindingSource
             // 
             this.dataTable2BindingSource.DataMember = "DataTable2";
-            this.dataTable2BindingSource.DataSource = this.bD_SeregiDataSet;
+            this.dataTable2BindingSource.DataSource = this.magazinichDataSet;
             // 
             // dataTable2TableAdapter
             // 
@@ -79,34 +77,29 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AdresTableAdapter = null;
+            this.tableAdapterManager.AddressTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChekTableAdapter = null;
+            this.tableAdapterManager.CityTableAdapter = null;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.GorodTableAdapter = null;
-            this.tableAdapterManager.KategoriaTableAdapter = null;
+            this.tableAdapterManager.CountryTableAdapter = null;
+            this.tableAdapterManager.Dok_TipTableAdapter = null;
+            this.tableAdapterManager.KategoriyaTableAdapter = null;
             this.tableAdapterManager.MagazTableAdapter = null;
             this.tableAdapterManager.NakladnayaTableAdapter = null;
-            this.tableAdapterManager.OblastTableAdapter = null;
-            this.tableAdapterManager.OrganizTableAdapter = null;
-            this.tableAdapterManager.OtchetTableAdapter = null;
-            this.tableAdapterManager.PostavshikTableAdapter = null;
-            this.tableAdapterManager.RaionTableAdapter = null;
+            this.tableAdapterManager.NazvanieTableAdapter = null;
+            this.tableAdapterManager.OrganizaciyaTableAdapter = null;
             this.tableAdapterManager.SkladTableAdapter = null;
-            this.tableAdapterManager.StatusTableAdapter = null;
-            this.tableAdapterManager.StranaTableAdapter = null;
-            this.tableAdapterManager.TipDocTableAdapter = null;
+            this.tableAdapterManager.StreetTableAdapter = null;
             this.tableAdapterManager.TovarTableAdapter = null;
-            this.tableAdapterManager.UlicaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Magazinciks.BD_SeregiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = MagazinWPF.MagazinichDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // dataTable2BindingNavigator
             // 
             this.dataTable2BindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.dataTable2BindingNavigator.BackColor = System.Drawing.SystemColors.ControlLight;
             this.dataTable2BindingNavigator.BindingSource = this.dataTable2BindingSource;
             this.dataTable2BindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.dataTable2BindingNavigator.DeleteItem = null;
+            this.dataTable2BindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.dataTable2BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -118,10 +111,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripTextBox1});
+            this.bindingNavigatorDeleteItem,
+            this.toolStripButton1});
             this.dataTable2BindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.dataTable2BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.dataTable2BindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -135,13 +126,12 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(148, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить/Редактировать";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
@@ -149,6 +139,15 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -211,30 +210,8 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 22);
-            this.toolStripButton1.Text = "Обновить";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(45, 22);
-            this.toolStripButton2.Text = "Меню";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // dataTable2DataGridView
             // 
-            this.dataTable2DataGridView.AllowUserToAddRows = false;
-            this.dataTable2DataGridView.AllowUserToDeleteRows = false;
             this.dataTable2DataGridView.AutoGenerateColumns = false;
             this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -242,73 +219,54 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn5});
             this.dataTable2DataGridView.DataSource = this.dataTable2BindingSource;
             this.dataTable2DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataTable2DataGridView.Location = new System.Drawing.Point(0, 25);
             this.dataTable2DataGridView.Name = "dataTable2DataGridView";
-            this.dataTable2DataGridView.ReadOnly = true;
             this.dataTable2DataGridView.Size = new System.Drawing.Size(800, 425);
             this.dataTable2DataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_Tovara";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_Товара";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Tovar";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Tovar";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "KategoriaTovara";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Категория Товара";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nazvanie";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nazvanie";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "NameTovara";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Наименование Товара";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Opt_price";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Opt_price";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "id_Magazina";
-            this.dataGridViewTextBoxColumn4.HeaderText = "id_Магазина";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Poz_price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Poz_price";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Cena";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Kategoriya";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Kategoriya";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // toolStripButton1
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Naimenovanie";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Наименование";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton3.Text = "Поиск";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(59, 22);
+            this.toolStripButton1.Text = "В МЕНЮ";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Tovar
             // 
@@ -317,10 +275,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataTable2DataGridView);
             this.Controls.Add(this.dataTable2BindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Tovar";
-            this.Text = "Tovar";
+            this.ShowIcon = false;
+            this.Text = "Товар";
             this.Load += new System.EventHandler(this.Tovar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bD_SeregiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinichDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingNavigator)).EndInit();
             this.dataTable2BindingNavigator.ResumeLayout(false);
@@ -333,13 +293,14 @@
 
         #endregion
 
-        private BD_SeregiDataSet bD_SeregiDataSet;
+        private MagazinichDataSet magazinichDataSet;
         private System.Windows.Forms.BindingSource dataTable2BindingSource;
-        private BD_SeregiDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
-        private BD_SeregiDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private MagazinichDataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
+        private MagazinichDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator dataTable2BindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -349,15 +310,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView dataTable2DataGridView;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
