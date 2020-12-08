@@ -1,4 +1,5 @@
-﻿namespace Magazinciks
+﻿
+namespace MagazinWPF
 {
     partial class MagazRed
     {
@@ -30,17 +31,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MagazRed));
-            System.Windows.Forms.Label id_MagazinaLabel;
-            System.Windows.Forms.Label id_TovaraLabel;
-            System.Windows.Forms.Label prihodLabel;
-            System.Windows.Forms.Label rozn_cenaLabel;
-            System.Windows.Forms.Label ostatok_v_magazLabel;
-            System.Windows.Forms.Label id_ChekLabel;
-            System.Windows.Forms.Label id_TipdocLabel;
-            this.bD_SeregiDataSet = new Magazinciks.BD_SeregiDataSet();
+            System.Windows.Forms.Label iD_MagazLabel;
+            System.Windows.Forms.Label iD_TovarLabel;
+            System.Windows.Forms.Label dateLabel;
+            System.Windows.Forms.Label ostatok_magazLabel;
+            System.Windows.Forms.Label prihon_magazLabel;
+            System.Windows.Forms.Label iD_addressLabel;
+            System.Windows.Forms.Label iD_NakladnayaLabel;
+            this.magazinichDataSet = new MagazinWPF.MagazinichDataSet();
             this.magazBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.magazTableAdapter = new Magazinciks.BD_SeregiDataSetTableAdapters.MagazTableAdapter();
-            this.tableAdapterManager = new Magazinciks.BD_SeregiDataSetTableAdapters.TableAdapterManager();
+            this.magazTableAdapter = new MagazinWPF.MagazinichDataSetTableAdapters.MagazTableAdapter();
+            this.tableAdapterManager = new MagazinWPF.MagazinichDataSetTableAdapters.TableAdapterManager();
             this.magazBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -54,35 +55,35 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.magazBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.id_MagazinaTextBox = new System.Windows.Forms.TextBox();
-            this.id_TovaraTextBox = new System.Windows.Forms.TextBox();
-            this.prihodTextBox = new System.Windows.Forms.TextBox();
-            this.rozn_cenaTextBox = new System.Windows.Forms.TextBox();
-            this.ostatok_v_magazTextBox = new System.Windows.Forms.TextBox();
-            this.id_ChekTextBox = new System.Windows.Forms.TextBox();
-            this.id_TipdocTextBox = new System.Windows.Forms.TextBox();
-            id_MagazinaLabel = new System.Windows.Forms.Label();
-            id_TovaraLabel = new System.Windows.Forms.Label();
-            prihodLabel = new System.Windows.Forms.Label();
-            rozn_cenaLabel = new System.Windows.Forms.Label();
-            ostatok_v_magazLabel = new System.Windows.Forms.Label();
-            id_ChekLabel = new System.Windows.Forms.Label();
-            id_TipdocLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_SeregiDataSet)).BeginInit();
+            this.iD_MagazTextBox = new System.Windows.Forms.TextBox();
+            this.iD_TovarTextBox = new System.Windows.Forms.TextBox();
+            this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ostatok_magazTextBox = new System.Windows.Forms.TextBox();
+            this.prihon_magazTextBox = new System.Windows.Forms.TextBox();
+            this.iD_addressTextBox = new System.Windows.Forms.TextBox();
+            this.iD_NakladnayaTextBox = new System.Windows.Forms.TextBox();
+            iD_MagazLabel = new System.Windows.Forms.Label();
+            iD_TovarLabel = new System.Windows.Forms.Label();
+            dateLabel = new System.Windows.Forms.Label();
+            ostatok_magazLabel = new System.Windows.Forms.Label();
+            prihon_magazLabel = new System.Windows.Forms.Label();
+            iD_addressLabel = new System.Windows.Forms.Label();
+            iD_NakladnayaLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinichDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazBindingNavigator)).BeginInit();
             this.magazBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bD_SeregiDataSet
+            // magazinichDataSet
             // 
-            this.bD_SeregiDataSet.DataSetName = "BD_SeregiDataSet";
-            this.bD_SeregiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.magazinichDataSet.DataSetName = "MagazinichDataSet";
+            this.magazinichDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // magazBindingSource
             // 
             this.magazBindingSource.DataMember = "Magaz";
-            this.magazBindingSource.DataSource = this.bD_SeregiDataSet;
+            this.magazBindingSource.DataSource = this.magazinichDataSet;
             // 
             // magazTableAdapter
             // 
@@ -90,25 +91,21 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AdresTableAdapter = null;
+            this.tableAdapterManager.AddressTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ChekTableAdapter = null;
-            this.tableAdapterManager.GorodTableAdapter = null;
-            this.tableAdapterManager.KategoriaTableAdapter = null;
+            this.tableAdapterManager.CityTableAdapter = null;
+            this.tableAdapterManager.CountryTableAdapter = null;
+            this.tableAdapterManager.Dok_TipTableAdapter = null;
+            this.tableAdapterManager.KategoriyaTableAdapter = null;
             this.tableAdapterManager.MagazTableAdapter = this.magazTableAdapter;
             this.tableAdapterManager.NakladnayaTableAdapter = null;
-            this.tableAdapterManager.OblastTableAdapter = null;
-            this.tableAdapterManager.OrganizTableAdapter = null;
-            this.tableAdapterManager.OtchetTableAdapter = null;
-            this.tableAdapterManager.PostavshikTableAdapter = null;
-            this.tableAdapterManager.RaionTableAdapter = null;
+            this.tableAdapterManager.NazvanieTableAdapter = null;
+            this.tableAdapterManager.OrganizaciyaTableAdapter = null;
             this.tableAdapterManager.SkladTableAdapter = null;
-            this.tableAdapterManager.StatusTableAdapter = null;
-            this.tableAdapterManager.StranaTableAdapter = null;
-            this.tableAdapterManager.TipDocTableAdapter = null;
+            this.tableAdapterManager.StreetTableAdapter = null;
             this.tableAdapterManager.TovarTableAdapter = null;
-            this.tableAdapterManager.UlicaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Magazinciks.BD_SeregiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = MagazinWPF.MagazinichDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // magazBindingNavigator
             // 
@@ -136,7 +133,7 @@
             this.magazBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.magazBindingNavigator.Name = "magazBindingNavigator";
             this.magazBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.magazBindingNavigator.Size = new System.Drawing.Size(302, 25);
+            this.magazBindingNavigator.Size = new System.Drawing.Size(326, 25);
             this.magazBindingNavigator.TabIndex = 0;
             this.magazBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -234,150 +231,151 @@
             this.magazBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.magazBindingNavigatorSaveItem.Click += new System.EventHandler(this.magazBindingNavigatorSaveItem_Click);
             // 
-            // id_MagazinaLabel
+            // iD_MagazLabel
             // 
-            id_MagazinaLabel.AutoSize = true;
-            id_MagazinaLabel.Location = new System.Drawing.Point(13, 31);
-            id_MagazinaLabel.Name = "id_MagazinaLabel";
-            id_MagazinaLabel.Size = new System.Drawing.Size(71, 13);
-            id_MagazinaLabel.TabIndex = 1;
-            id_MagazinaLabel.Text = "id Магазина:";
+            iD_MagazLabel.AutoSize = true;
+            iD_MagazLabel.Location = new System.Drawing.Point(11, 31);
+            iD_MagazLabel.Name = "iD_MagazLabel";
+            iD_MagazLabel.Size = new System.Drawing.Size(77, 13);
+            iD_MagazLabel.TabIndex = 1;
+            iD_MagazLabel.Text = "ID_Магазина:";
             // 
-            // id_MagazinaTextBox
+            // iD_MagazTextBox
             // 
-            this.id_MagazinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "id_Magazina", true));
-            this.id_MagazinaTextBox.Location = new System.Drawing.Point(109, 28);
-            this.id_MagazinaTextBox.Name = "id_MagazinaTextBox";
-            this.id_MagazinaTextBox.Size = new System.Drawing.Size(172, 20);
-            this.id_MagazinaTextBox.TabIndex = 2;
+            this.iD_MagazTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "ID_Magaz", true));
+            this.iD_MagazTextBox.Location = new System.Drawing.Point(98, 28);
+            this.iD_MagazTextBox.Name = "iD_MagazTextBox";
+            this.iD_MagazTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_MagazTextBox.TabIndex = 2;
             // 
-            // id_TovaraLabel
+            // iD_TovarLabel
             // 
-            id_TovaraLabel.AutoSize = true;
-            id_TovaraLabel.Location = new System.Drawing.Point(13, 57);
-            id_TovaraLabel.Name = "id_TovaraLabel";
-            id_TovaraLabel.Size = new System.Drawing.Size(58, 13);
-            id_TovaraLabel.TabIndex = 3;
-            id_TovaraLabel.Text = "id Товара:";
+            iD_TovarLabel.AutoSize = true;
+            iD_TovarLabel.Location = new System.Drawing.Point(11, 57);
+            iD_TovarLabel.Name = "iD_TovarLabel";
+            iD_TovarLabel.Size = new System.Drawing.Size(64, 13);
+            iD_TovarLabel.TabIndex = 3;
+            iD_TovarLabel.Text = "ID_Товара:";
             // 
-            // id_TovaraTextBox
+            // iD_TovarTextBox
             // 
-            this.id_TovaraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "id_Tovara", true));
-            this.id_TovaraTextBox.Location = new System.Drawing.Point(109, 54);
-            this.id_TovaraTextBox.Name = "id_TovaraTextBox";
-            this.id_TovaraTextBox.Size = new System.Drawing.Size(172, 20);
-            this.id_TovaraTextBox.TabIndex = 4;
+            this.iD_TovarTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "ID_Tovar", true));
+            this.iD_TovarTextBox.Location = new System.Drawing.Point(98, 54);
+            this.iD_TovarTextBox.Name = "iD_TovarTextBox";
+            this.iD_TovarTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_TovarTextBox.TabIndex = 4;
             // 
-            // prihodLabel
+            // dateLabel
             // 
-            prihodLabel.AutoSize = true;
-            prihodLabel.Location = new System.Drawing.Point(13, 83);
-            prihodLabel.Name = "prihodLabel";
-            prihodLabel.Size = new System.Drawing.Size(47, 13);
-            prihodLabel.TabIndex = 5;
-            prihodLabel.Text = "Приход:";
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(11, 84);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(36, 13);
+            dateLabel.TabIndex = 5;
+            dateLabel.Text = "Дата:";
             // 
-            // prihodTextBox
+            // dateDateTimePicker
             // 
-            this.prihodTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "Prihod", true));
-            this.prihodTextBox.Location = new System.Drawing.Point(109, 80);
-            this.prihodTextBox.Name = "prihodTextBox";
-            this.prihodTextBox.Size = new System.Drawing.Size(172, 20);
-            this.prihodTextBox.TabIndex = 6;
+            this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.magazBindingSource, "Date", true));
+            this.dateDateTimePicker.Location = new System.Drawing.Point(98, 80);
+            this.dateDateTimePicker.Name = "dateDateTimePicker";
+            this.dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateDateTimePicker.TabIndex = 6;
             // 
-            // rozn_cenaLabel
+            // ostatok_magazLabel
             // 
-            rozn_cenaLabel.AutoSize = true;
-            rozn_cenaLabel.Location = new System.Drawing.Point(13, 109);
-            rozn_cenaLabel.Name = "rozn_cenaLabel";
-            rozn_cenaLabel.Size = new System.Drawing.Size(64, 13);
-            rozn_cenaLabel.TabIndex = 7;
-            rozn_cenaLabel.Text = "Розн.Цена:";
+            ostatok_magazLabel.AutoSize = true;
+            ostatok_magazLabel.Location = new System.Drawing.Point(11, 109);
+            ostatok_magazLabel.Name = "ostatok_magazLabel";
+            ostatok_magazLabel.Size = new System.Drawing.Size(52, 13);
+            ostatok_magazLabel.TabIndex = 7;
+            ostatok_magazLabel.Text = "Остаток:";
             // 
-            // rozn_cenaTextBox
+            // ostatok_magazTextBox
             // 
-            this.rozn_cenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "Rozn_cena", true));
-            this.rozn_cenaTextBox.Location = new System.Drawing.Point(109, 106);
-            this.rozn_cenaTextBox.Name = "rozn_cenaTextBox";
-            this.rozn_cenaTextBox.Size = new System.Drawing.Size(172, 20);
-            this.rozn_cenaTextBox.TabIndex = 8;
+            this.ostatok_magazTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "Ostatok_magaz", true));
+            this.ostatok_magazTextBox.Location = new System.Drawing.Point(98, 106);
+            this.ostatok_magazTextBox.Name = "ostatok_magazTextBox";
+            this.ostatok_magazTextBox.Size = new System.Drawing.Size(200, 20);
+            this.ostatok_magazTextBox.TabIndex = 8;
             // 
-            // ostatok_v_magazLabel
+            // prihon_magazLabel
             // 
-            ostatok_v_magazLabel.AutoSize = true;
-            ostatok_v_magazLabel.Location = new System.Drawing.Point(13, 135);
-            ostatok_v_magazLabel.Name = "ostatok_v_magazLabel";
-            ostatok_v_magazLabel.Size = new System.Drawing.Size(93, 13);
-            ostatok_v_magazLabel.TabIndex = 9;
-            ostatok_v_magazLabel.Text = "Ост. в магазине:";
+            prihon_magazLabel.AutoSize = true;
+            prihon_magazLabel.Location = new System.Drawing.Point(11, 135);
+            prihon_magazLabel.Name = "prihon_magazLabel";
+            prihon_magazLabel.Size = new System.Drawing.Size(47, 13);
+            prihon_magazLabel.TabIndex = 9;
+            prihon_magazLabel.Text = "Приход:";
             // 
-            // ostatok_v_magazTextBox
+            // prihon_magazTextBox
             // 
-            this.ostatok_v_magazTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "Ostatok_v_magaz", true));
-            this.ostatok_v_magazTextBox.Location = new System.Drawing.Point(109, 132);
-            this.ostatok_v_magazTextBox.Name = "ostatok_v_magazTextBox";
-            this.ostatok_v_magazTextBox.Size = new System.Drawing.Size(172, 20);
-            this.ostatok_v_magazTextBox.TabIndex = 10;
+            this.prihon_magazTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "Prihon_magaz", true));
+            this.prihon_magazTextBox.Location = new System.Drawing.Point(98, 132);
+            this.prihon_magazTextBox.Name = "prihon_magazTextBox";
+            this.prihon_magazTextBox.Size = new System.Drawing.Size(200, 20);
+            this.prihon_magazTextBox.TabIndex = 10;
             // 
-            // id_ChekLabel
+            // iD_addressLabel
             // 
-            id_ChekLabel.AutoSize = true;
-            id_ChekLabel.Location = new System.Drawing.Point(13, 161);
-            id_ChekLabel.Name = "id_ChekLabel";
-            id_ChekLabel.Size = new System.Drawing.Size(41, 13);
-            id_ChekLabel.TabIndex = 11;
-            id_ChekLabel.Text = "id Чек:";
+            iD_addressLabel.AutoSize = true;
+            iD_addressLabel.Location = new System.Drawing.Point(11, 161);
+            iD_addressLabel.Name = "iD_addressLabel";
+            iD_addressLabel.Size = new System.Drawing.Size(57, 13);
+            iD_addressLabel.TabIndex = 11;
+            iD_addressLabel.Text = "ID_адрес:";
             // 
-            // id_ChekTextBox
+            // iD_addressTextBox
             // 
-            this.id_ChekTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "id_Chek", true));
-            this.id_ChekTextBox.Location = new System.Drawing.Point(109, 158);
-            this.id_ChekTextBox.Name = "id_ChekTextBox";
-            this.id_ChekTextBox.Size = new System.Drawing.Size(172, 20);
-            this.id_ChekTextBox.TabIndex = 12;
+            this.iD_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "ID_address", true));
+            this.iD_addressTextBox.Location = new System.Drawing.Point(98, 158);
+            this.iD_addressTextBox.Name = "iD_addressTextBox";
+            this.iD_addressTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_addressTextBox.TabIndex = 12;
             // 
-            // id_TipdocLabel
+            // iD_NakladnayaLabel
             // 
-            id_TipdocLabel.AutoSize = true;
-            id_TipdocLabel.Location = new System.Drawing.Point(13, 187);
-            id_TipdocLabel.Name = "id_TipdocLabel";
-            id_TipdocLabel.Size = new System.Drawing.Size(58, 13);
-            id_TipdocLabel.TabIndex = 13;
-            id_TipdocLabel.Text = "id Типдок:";
+            iD_NakladnayaLabel.AutoSize = true;
+            iD_NakladnayaLabel.Location = new System.Drawing.Point(11, 187);
+            iD_NakladnayaLabel.Name = "iD_NakladnayaLabel";
+            iD_NakladnayaLabel.Size = new System.Drawing.Size(83, 13);
+            iD_NakladnayaLabel.TabIndex = 13;
+            iD_NakladnayaLabel.Text = "ID_Накладная:";
             // 
-            // id_TipdocTextBox
+            // iD_NakladnayaTextBox
             // 
-            this.id_TipdocTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "id_Tipdoc", true));
-            this.id_TipdocTextBox.Location = new System.Drawing.Point(109, 184);
-            this.id_TipdocTextBox.Name = "id_TipdocTextBox";
-            this.id_TipdocTextBox.Size = new System.Drawing.Size(172, 20);
-            this.id_TipdocTextBox.TabIndex = 14;
+            this.iD_NakladnayaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.magazBindingSource, "ID_Nakladnaya", true));
+            this.iD_NakladnayaTextBox.Location = new System.Drawing.Point(98, 184);
+            this.iD_NakladnayaTextBox.Name = "iD_NakladnayaTextBox";
+            this.iD_NakladnayaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.iD_NakladnayaTextBox.TabIndex = 14;
             // 
             // MagazRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 233);
-            this.Controls.Add(id_MagazinaLabel);
-            this.Controls.Add(this.id_MagazinaTextBox);
-            this.Controls.Add(id_TovaraLabel);
-            this.Controls.Add(this.id_TovaraTextBox);
-            this.Controls.Add(prihodLabel);
-            this.Controls.Add(this.prihodTextBox);
-            this.Controls.Add(rozn_cenaLabel);
-            this.Controls.Add(this.rozn_cenaTextBox);
-            this.Controls.Add(ostatok_v_magazLabel);
-            this.Controls.Add(this.ostatok_v_magazTextBox);
-            this.Controls.Add(id_ChekLabel);
-            this.Controls.Add(this.id_ChekTextBox);
-            this.Controls.Add(id_TipdocLabel);
-            this.Controls.Add(this.id_TipdocTextBox);
+            this.ClientSize = new System.Drawing.Size(326, 240);
+            this.Controls.Add(iD_MagazLabel);
+            this.Controls.Add(this.iD_MagazTextBox);
+            this.Controls.Add(iD_TovarLabel);
+            this.Controls.Add(this.iD_TovarTextBox);
+            this.Controls.Add(dateLabel);
+            this.Controls.Add(this.dateDateTimePicker);
+            this.Controls.Add(ostatok_magazLabel);
+            this.Controls.Add(this.ostatok_magazTextBox);
+            this.Controls.Add(prihon_magazLabel);
+            this.Controls.Add(this.prihon_magazTextBox);
+            this.Controls.Add(iD_addressLabel);
+            this.Controls.Add(this.iD_addressTextBox);
+            this.Controls.Add(iD_NakladnayaLabel);
+            this.Controls.Add(this.iD_NakladnayaTextBox);
             this.Controls.Add(this.magazBindingNavigator);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MagazRed";
-            this.Text = "MagazRed";
+            this.ShowIcon = false;
+            this.Text = "Добавить/Редактировать";
             this.Load += new System.EventHandler(this.MagazRed_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bD_SeregiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinichDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazBindingNavigator)).EndInit();
             this.magazBindingNavigator.ResumeLayout(false);
@@ -389,10 +387,10 @@
 
         #endregion
 
-        private BD_SeregiDataSet bD_SeregiDataSet;
+        private MagazinichDataSet magazinichDataSet;
         private System.Windows.Forms.BindingSource magazBindingSource;
-        private BD_SeregiDataSetTableAdapters.MagazTableAdapter magazTableAdapter;
-        private BD_SeregiDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private MagazinichDataSetTableAdapters.MagazTableAdapter magazTableAdapter;
+        private MagazinichDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator magazBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -406,12 +404,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton magazBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_MagazinaTextBox;
-        private System.Windows.Forms.TextBox id_TovaraTextBox;
-        private System.Windows.Forms.TextBox prihodTextBox;
-        private System.Windows.Forms.TextBox rozn_cenaTextBox;
-        private System.Windows.Forms.TextBox ostatok_v_magazTextBox;
-        private System.Windows.Forms.TextBox id_ChekTextBox;
-        private System.Windows.Forms.TextBox id_TipdocTextBox;
+        private System.Windows.Forms.TextBox iD_MagazTextBox;
+        private System.Windows.Forms.TextBox iD_TovarTextBox;
+        private System.Windows.Forms.DateTimePicker dateDateTimePicker;
+        private System.Windows.Forms.TextBox ostatok_magazTextBox;
+        private System.Windows.Forms.TextBox prihon_magazTextBox;
+        private System.Windows.Forms.TextBox iD_addressTextBox;
+        private System.Windows.Forms.TextBox iD_NakladnayaTextBox;
     }
 }

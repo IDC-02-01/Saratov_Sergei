@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Magazinciks
+namespace MagazinWPF
 {
     public partial class MagazRed : Form
     {
@@ -23,22 +23,30 @@ namespace Magazinciks
             {
                 this.Validate();
                 this.magazBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.bD_SeregiDataSet);
+                this.tableAdapterManager.UpdateAll(this.magazinichDataSet);
             }
-            catch (Exception)
+            catch (Exception x)
             {
 
-                MessageBox.Show("Столбцы должны быть заполнены!");
+                MessageBox.Show("Ошибка!"+x);
             }
-
+            
 
         }
 
         private void MagazRed_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bD_SeregiDataSet.Magaz". При необходимости она может быть перемещена или удалена.
-            this.magazTableAdapter.Fill(this.bD_SeregiDataSet.Magaz);
+            try
+            {
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "magazinichDataSet.Magaz". При необходимости она может быть перемещена или удалена.
+                this.magazTableAdapter.Fill(this.magazinichDataSet.Magaz);
+            }
+            catch (Exception x)
+            {
 
+                MessageBox.Show("Ошибка!" + x);
+            }
+            
         }
     }
 }
